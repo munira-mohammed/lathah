@@ -3,14 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title> لذة|البحث عن وصفة</title>
+        <link rel="StyleSheet" href="style.css">
     </head>
 <body>
-<p>
-<form>
-    <label> البحث
+<div>
+    <form>
+    <p><label> البحث</p>
         <input type="search">
     </label>
-</p>
+</div>
+<div class="filters">
 <p>
     <label> نوع الطبق
         <select name="dish">
@@ -34,8 +36,12 @@
     <label> الوقت بالدقائق
         <input type="time">
     </label>
+</p> 
+<p>
+    <label> عدد الأشخاص
+        <input type="number" max="10" min="1">
+    </label>
 </p>
-
 
 
 
