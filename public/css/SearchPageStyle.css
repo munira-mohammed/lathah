@@ -18,6 +18,11 @@ body{
     width: auto;
     padding: 5px;
 }
+button:active{
+    box-shadow: 0 0 10px #ffa500; 
+    transition: all 0.3s ease-in-out; 
+}
+
 .SearchIcon{ 
    width: 40%;
    height: auto;
@@ -37,7 +42,7 @@ body{
     border: solid rgb(170, 168, 168);
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* عمودين متساويين */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px; 
     margin-top: 20px;  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    
@@ -45,6 +50,12 @@ body{
 .filters input, .filters select{
     border: solid #FFA500;
     border-radius: 10px;
+}
+.filters input:focus, .filters select:focus ,.form-control:focus{
+outline: none; 
+border-color: #ffa500;
+box-shadow: 0 0 5px #ffa500; 
+transition: all 0.3s ease-in-out; 
 }
 
        
