@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,61 +14,28 @@
   </head>
   <body>
   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-     
-        <a class="navbar-brand" href="#"><img class="logo" src="\logoAndIcon\logoWithOutBackgroun.svg" alt=""></a>
         
-       
+        <a class="navbar-brand" href="#">
+          <img class="logo" src="\logoAndIcon\logoWithOutBackgroun.svg" alt="Logo">
+        </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
     
-      
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto text-end">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="homePage.html">الصفحة الرئيسية</a>
+              <a class="nav-link active" aria-current="page" href="/homePage">الصفحة الرئيسية</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="SearchPage.html">الوصفات</a>
+              <a class="nav-link" href="/SearchPage">البحث</a>
             </li>
-          </ul>
-    
-          <ul class="navbar-nav">
-            <li class="nav-item" id="add-recipe-item" style="display: none;">
-              <a class="nav-link" href="#">إضافة وصفة</a>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">تسجيل الدخول</a>
             </li>
-    
-            <li class="nav-item dropdown" id="user-dropdown" style="display: none;">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span id="user-name">المستخدم</span>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#" id="signout-item">تسجيل الخروج</a></li>
-              </ul>
-            </li>
-    
-      
-            <li class="nav-item" id="signin-button">
-            
-            <div id="g_id_onload"
-                data-context="signin"
-                data-ux_mode="popup"
-                data-callback="handleCredentialResponse"
-                data-client_id="your-client-id-here" 
-                data-auto_select="true">
-            </div>
-            <div class="g_id_signin"
-                data-type="standard"
-                data-shape="rectangular"
-                data-theme="outline"
-                data-text="sign_in_with"
-                data-size="medium"
-                data-logo_alignment="left">
-            </div>
-          </li>
-
           </ul>
         </div>
       </div>
@@ -139,9 +105,6 @@
 
 
     </footer>
-
-   \
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
 
