@@ -1,0 +1,28 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl; /* النصوص تبدأ من اليمين */
+    margin: 0;
+    background-color: #FAFAFA; 
+    text-align: center;
+    color: #333;
+    padding: 50px;
+  }
+  h1 {
+    font-size: 50px;
+    color: #dc3545;
+  }
+  p {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #FFA500;
+    text-decoration: none;
+    border-radius: 5px;
+  }
