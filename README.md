@@ -77,7 +77,7 @@ Here are the technologies and tools we are using for the project:
 
 [Bootstrap](https://getbootstrap.com/) Used to create responsive designs for the website.
 
-[Lucid Chart](https://www.lucidchart.com/) Used to create the flowcharts to plan the project.
+[draw.io](https://www.drawio.com/) Used to create the flowcharts to plan the project.
 
 [Figma](https://www.figma.com/) Visual design tool used for creating the website's layout and interface.
 
