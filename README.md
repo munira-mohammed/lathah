@@ -21,6 +21,7 @@ Lathah is an interactive website designed for cooking lovers, offering a platfor
 * **Add Recipes:** Users can upload recipes with detailed information, and images.
 
 # Flow Chart
+<img src = "https://github.com/user-attachments/assets/4dc0b90a-8a6e-485f-aec9-b56d93764ae5" width=500>
 
 # Setup Instructions
   
