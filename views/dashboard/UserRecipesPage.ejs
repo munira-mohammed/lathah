@@ -1,0 +1,69 @@
+
+<div>
+    <a href="/dashboard/AddRecipePage">
+    <button class="add-recipe-button" >إضافة وصفة جديدة</button>
+</a>
+<div class="recipe-container">
+    <% recipes.forEach(function(recipe) { %>
+        <div class="recipe-card">
+        <a href="/dashboard/recipe/<%= recipe._id %>" style="text-decoration: none; color: #000;">
+            <img src="<%= recipe.image %>" alt="<%= recipe.name %>" class="recipe-image">
+            <div class="recipe-content position-relative">
+              <h3 class="recipe-title">
+                <%= recipe.name %>
+                </h3>
+              </a>
+                <div class="dropdown position-absolute top-0 start-0">
+                  <button class="btn btn-transparent" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i > ... </i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">تعديل</a></li>
+                    <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">حذف</a></li>
+                  </ul>
+                </div>
+              </h3>
+              <p class="recipe-author">بواسطة <%= recipe.authorize || "مستخدم مجهول" %></p>
+              <div class="recipe-details">
+                <div class="detail">
+                  <img src="/logoAndIcon/persons_icon.svg" alt="أيقونة الأشخاص">
+                  <span><%= recipe.minPeople %> - <%= recipe.maxPeople %> أشخاص</span>
+                </div>
+                <div class="detail">
+                  <img src="/logoAndIcon/Time_icon.svg" alt="أيقونة الوقت">
+                  <span><%= recipe.time %> دقيقة</span>
+                </div>
+                <div class="detail">
+                  <img src="/logoAndIcon/Dish_icon.svg" alt="أيقونة الطبق">
+                  <span><%= recipe.type %></span>
+                </div>
+                <div class="detail">
+                  <img src="/logoAndIcon/Level_icon.svg" alt="أيقونة المستوى">
+                  <span><%= recipe.level %></span>
+                </div>
+              </div>
+            </div>
+          </div>          
+    <% }) %>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">تأكيد الحذف</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                هل أنت متأكد أنك تريد حذف هذا العنصر؟
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-danger">حذف</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
