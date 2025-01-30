@@ -1,0 +1,49 @@
+<div class="container">
+  <section class="recipe-container">
+      <h1 class="recipe-title"><%= recipe.title %></h1> <!-- عنوان الوصفة من الخادم -->
+      
+      <div class="recipe-content">
+          <img src="<%= recipe.image %>" alt="صورة الوصفة" class="recipe_img">
+
+          <div class="box_content_part">
+              <div class="box_content">
+                  <img src="/logoAndIcon/Dish_icon.svg" alt="أيقونة الطبق">
+                  <p><%= recipe.type %></p> <!-- نوع الطبق -->
+              </div>
+              <div class="box_content">
+                  <img src="/logoAndIcon/Level_icon.svg" alt="أيقونة المستوى">
+                  <p><%= recipe.level %></p> <!-- مستوى الصعوبة -->
+              </div>
+              <div class="box_content">
+                  <img src="/logoAndIcon/Time_icon.svg" alt="أيقونة الوقت">
+                  <p><%= recipe.time %> دقيقة</p> <!-- وقت التحضير -->
+              </div>
+              <div class="box_content">
+                  <img src="/logoAndIcon/persons_icon.svg" alt="أيقونة الأشخاص">
+                  <p><%= recipe.minPeople %> - <%= recipe.maxPeople %> أشخاص</p> <!-- عدد الأشخاص -->
+              </div>
+          </div>
+      </div>
+
+  </section>
+
+  <div class="ingredients">
+      <h2>المكونات</h2>
+      <ul id="ingredients-list">
+          <% recipe.ingredients.forEach(function(ingredient) { %> <!-- التكرار عبر المكونات -->
+              <li><%= ingredient %></li>
+          <% }) %>
+      </ul>
+  </div>
+
+  <div class="preparation">
+      <h2>طريقة التحضير</h2>
+      <ol id="preparation-steps">
+          <% recipe.steps.forEach(function(step) { %> <!-- التكرار عبر خطوات التحضير -->
+              <li><%= step %></li>
+          <% }) %>
+      </ol>
+  </div>
+</div>
+
+  
