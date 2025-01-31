@@ -18,8 +18,10 @@
                     <i > ... </i>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">تعديل</a></li>
-                    <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">حذف</a></li>
+                    <li><a class="dropdown-item" href="/dashboard/recipe-update/<%= recipe._id %>">تعديل</a></li>
+                    <li> <form action="/dashboard/recipe-delete/<%= recipe._id %>?_method=DELETE" method="POST" class="position-relative">
+                      <button type="submit" class="btn btn-danger">حذف</button>
+                    </form></li>
                   </ul>
                 </div>
               </h3>
@@ -47,23 +49,5 @@
     <% }) %>
 </div>
 
-<!-- Delete Confirmation Modal -->
-<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteConfirmationModalLabel">تأكيد الحذف</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                هل أنت متأكد أنك تريد حذف هذا العنصر؟
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
-                <button type="button" class="btn btn-danger">حذف</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 </div>

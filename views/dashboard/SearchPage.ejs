@@ -1,5 +1,5 @@
 <div>
-    <form>
+    <form  method="POST" action="/dashboard/search">
         <div class="search-container">
             <h2>البحث</h2>
             <div class="search-bar">
@@ -9,64 +9,41 @@
                   </div>
             </div>
             </div>
-<div class="filters">
-<p>
-    <label> نوع الطبق
-        <select name="dish">
-            <option value="main"> اطباق رئيسية </option>
-            <option value=" sancks">  مقبلات </option>
-            <option value="drinks"> مشروبات </option>
-            <option value="dessert">  حلويات </option>
-        </select>
-    </label>
-</p>
-<p>
-    <label> المستوى
-        <select name="level">
-            <option value="hard"> صعب</option>
-            <option value=" mid">متوسط  </option>
-            <option value="easy"> سهل</option>
-        </select>
-    </label>
-</p>
-<p>
-    <label> الوقت بالدقائق
-        <input type="number" max="300" min="1">
-    </label>
-</p> 
-<p>
-    <label> عدد الأشخاص
-        <input type="number" max="10" min="1">
-    </label>
-</p>
-</div>
-
 </form>
+<div class="recipe-container">
+    <% searchResults.forEach(function(recipe) { %>
 
 <div class="recipe-card">
-    <img src="lasaniya.png" alt="صورة لازانيا" class="recipe-image">
-    <div class="recipe-content">
-        <h3 class="recipe-title">وصفة اللازانيا</h3>
-        <p class="recipe-author">بواسطة احمد سالم</p>
-        <div class="recipe-details">
+    <a href="/dashboard/recipe/<%= recipe._id %>" style="text-decoration: none; color: #000;">
+        <img src="<%= recipe.image %>" alt="<%= recipe.name %>" class="recipe-image">
+        <div class="recipe-content position-relative">
+          <h3 class="recipe-title">
+            <%= recipe.name %>
+            </h3>
+          </a>
+          <p class="recipe-author">بواسطة <%= recipe.authorize || "مستخدم مجهول" %></p>
+          <div class="recipe-details">
             <div class="detail">
                 <img src="/logoAndIcon/persons_icon.svg" alt="أيقونة الأشخاص">
-                <span>6-8 أشخاص</span>
+                <span><%= recipe.minPeople %> - <%= recipe.maxPeople %> أشخاص</span>
             </div>
             <div class="detail">
                 <img src="/logoAndIcon/Time_icon.svg" alt="أيقونة الوقت">
-                <span>ساعة و 10 دقائق</span>
+                <span><%= recipe.time %> دقيقة</span>
             </div>
             <div class="detail">
                 <img src="/logoAndIcon/Dish_icon.svg" alt="أيقونة الطبق">
-                <span>طبق رئيسي</span>
+                <span><%= recipe.type %></span>
             </div>
             <div class="detail">
                 <img src="/logoAndIcon/Level_icon.svg" alt="أيقونة المستوى">
-                <span>سهل</span>
+                <span><%= recipe.level %></span>
             </div>
         </div>
     </div>
+</div>
+<% }) %>
+
 </div>
 
 </div>
