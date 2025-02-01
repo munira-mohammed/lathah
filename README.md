@@ -55,6 +55,17 @@ Here are the technologies and tools we are using for the project:
 **Tools:** Visual Studio Code (Code Editor) - GitHub (Version Control) - Figma (UI/UX Design) 
 
 # Screenshots
+![لذه _ الصفحة الرئيسية - Personal - Microsoft​ Edge 2_1_2025 5_56_53 PM](https://github.com/user-attachments/assets/6ea590bb-4fd0-421f-b3d2-54d36b598b2d)
+![لذه _ الصفحة الرئيسية - Personal - Microsoft​ Edge 2_1_2025 5_57_02 PM](https://github.com/user-attachments/assets/078a5d1f-776f-4ec3-9172-4fae822e1cd9)
+![لذه _ الصفحة الرئيسية - Personal - Microsoft​ Edge 2_1_2025 5_57_09 PM](https://github.com/user-attachments/assets/8ca34b88-4d29-4283-9895-25a860015eba)
+![لذه _ الصفحة الرئيسية - Personal - Microsoft​ Edge 2_1_2025 5_57_15 PM](https://github.com/user-attachments/assets/7d6ed139-7f69-498d-832b-5dfcbdfa71d7)
+
+![لذه _ الصفحة الرئيسية - Personal - Microsoft​ Edge 2_1_2025 5_57_41 PM](https://github.com/user-attachments/assets/5fd9d734-09b8-42c9-a8a4-bbd68067513e)
+![localhost_5000_dashboard_recipe-update_679a9750ce5d0b8b90d54ecc - Personal - Microsoft​ Edge 2_1_2025 5_59_06 PM](https://github.com/user-attachments/assets/d0b25df8-e6f2-42af-8e5c-1189636e3812)
+![localhost_5000_dashboard_recipe-update_679a9750ce5d0b8b90d54ecc - Personal - Microsoft​ Edge 2_1_2025 5_59_13 PM](https://github.com/user-attachments/assets/cb433126-c2c1-45cf-8736-b1dc63a1ab76)
+![لذه _ الصفحة الرئيسية - Personal - Microsoft​ Edge 2_1_2025 5_58_09 PM](https://github.com/user-attachments/assets/733bab8d-e40e-4bff-b0ea-bd6361cae7ac)
+![لذه _ الصفحة الرئيسية - Personal - Microsoft​ Edge 2_1_2025 5_58_15 PM](https://github.com/user-attachments/assets/c2fdb1aa-76a0-4022-b00e-0170a718359c)
+![localhost_5000_dashboard_recipe-update_679a9750ce5d0b8b90d54ecc - Personal - Microsoft​ Edge 2_1_2025 5_59_21 PM](https://github.com/user-attachments/assets/e7fd64d1-eb45-4797-8209-ab3dfccdbc02)
 
 # Future Work 
 
