@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const mongoose = require("mongoose");
 const { authorize } = require("passport");
 const Schema = mongoose.Schema; 
 
