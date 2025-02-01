@@ -55,6 +55,7 @@ footer .copyright{
 .container-addRecipe input,
 .container-addRecipe select,
 .container-addRecipe textarea {
+    margin-top:10px ;
     width: 100%;
     border: solid #ffa500;
     border-radius: 12px;
