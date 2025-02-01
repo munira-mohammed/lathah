@@ -95,6 +95,8 @@ Here are the technologies and tools we are using for the project:
 
 [Visual Studio Code](https://code.visualstudio.com/) Code editor used for writing and managing the project's code
 
+[Youtube Video](https://www.youtube.com/watch?v=BDo1lgaZuII) helped us understand Node.js and how to perform CRUD operations
+
 # Team Members
 
 Munira Alangari
