@@ -29,8 +29,12 @@ body{
 }
 
 
-.recipe-content {
+.recipe-container {
     padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .recipe-title {

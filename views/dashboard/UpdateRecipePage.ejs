@@ -1,0 +1,80 @@
+
+    <div class="container-addRecipe">
+        <h2>تعديل وصفة</h2>
+    <form class="row g-3" action="/dashboard/recipe-update/<%= recipe._id %>?_method=PUT" method="POST">
+        <div class="col-12">
+          <label for="form-control" class="form-label"> اسم الوصفه </label>
+          <input type="text" class="form-control" name="name" value="<%= recipe.name %>" >
+        </div>
+        <div class="col-12">
+          <label for="form-control" class="form-label">بواسطه </label>
+          <input type="text" class="form-control" name="authorize" value="<%= recipe.authorize %>" >
+        </div>
+        <div class="col-12">
+            <label for="recipe-image">أضف صورة</label>
+            <input type="url" name="image" class="recipeAddimage" placeholder="اضف صورة" value="<%= recipe.image %>">
+        </div>
+        <div class="col-md-6">
+            <label for="form-select" class="form-label">نوع الطبق</label>
+            <select class="form-select" name="type" value="<%= recipe.type %>">
+            <option value="أطباق رئيسية"> اطباق رئيسية </option>
+            <option value="مقبلات">  مقبلات </option>
+            <option value="مشروبات"> مشروبات </option>
+            <option value = "حلويات">  حلويات </option>
+        </select>
+        </div>
+        <div class="col-md-6">
+            <label for="form-select" class="form-label">المستوى</label>
+            <select class="form-select" name="level" value="<%= recipe.level %>">
+            <option value="صعب"> صعب</option>
+            <option value="متوسط">متوسط  </option>
+            <option value="سهل"> سهل</option>
+      </select> 
+        </div>
+        <div class="col-12">
+          <label for="form-control" class="form-label"> الوقت بالدقائق</label>
+          <input type="number" class="form-control" name="time" min="1" value="<%= recipe.time %>">
+        </div>
+        <div class="col-md-6">
+          <label for="form-control" class="form-label">الحد الأدنى لعدد الأشخاص</label>
+          <input type="number" class="form-control" min="1"  name="minPeople" value="<%= recipe.minPeople %>">
+        </div>
+        <div class="col-md-6">
+          <label for="form-control" class="form-label">الحد الأقصى لعدد الأشخاص</label>
+          <input type="number" class="form-control" min="1" name="maxPeople" value="<%= recipe.maxPeople %>">
+        </div>
+        <div class="ingredientList col-12">
+          <label for="form-control" class="form-label"> قائمة المكونات </label>
+          <% recipe.ingredients.forEach(function(ingredient) { %> <!-- التكرار عبر المكونات -->
+            <input type="text" name="ingredients" class="form-control" value="<%= ingredient %>">
+          <% }) %>
+          <div class="ingredeintDiv">
+           
+              <input type="text" name="ingredients" class="form-control" >
+        
+        </div>
+      </div>
+        <div class="col-12">
+          <button id="addIngredientsBtn"  type="button"   > اضف مكون</button>
+        </div>
+        <div class="preparationStepList col-12">
+            <label for="form-control" class="form-label"> قائمة طريقة التحضير</label>
+            <% recipe.steps.forEach(function(step) { %> <!-- التكرار عبر خطوات التحضير -->
+              <input type="text" class="form-control" name="steps" value="<%= step %>">
+            <% }) %>
+            <div class="preparationStepDiv">
+  
+                <input type="text" class="form-control" name="steps">
+             
+          </div>
+          </div>
+          <div class="col-12">
+            <button id="addPreparationStepBtn"  type="button" > اضف خطوة تحضير</button>
+          </div>
+          <div class="send_recipe">
+          <div class="col-12">
+            <button type="submit" > ارسال الوصفة</button>
+          </div>
+        </div>
+      </form>
+      </div>
