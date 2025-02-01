@@ -1,49 +1,47 @@
 <div>
-    <form  method="POST" action="/dashboard/search">
+    <form method="POST" action="/dashboard/search">
         <div class="search-container">
             <h2>البحث</h2>
             <div class="search-bar">
                 <div class="input-group mb-3">
-                    <input type="search" class="form-control" placeholder="ابحث عن وصفة..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"> <img class="SearchIcon" src="/logoAndIcon/Search_Icon.svg" alt="search icon"></button>
+                    <input type="search" class="form-control" placeholder="ابحث عن وصفة..." aria-label="Recipient's username" aria-describedby="button-addon2" name="name">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <img class="SearchIcon" src="/logoAndIcon/Search_Icon.svg" alt="search icon"></button>
                   </div>
             </div>
             </div>
+
 </form>
 <div class="recipe-container">
     <% searchResults.forEach(function(recipe) { %>
-
-<div class="recipe-card">
-    <a href="/dashboard/recipe/<%= recipe._id %>" style="text-decoration: none; color: #000;">
-        <img src="<%= recipe.image %>" alt="<%= recipe.name %>" class="recipe-image">
-        <div class="recipe-content position-relative">
-          <h3 class="recipe-title">
-            <%= recipe.name %>
-            </h3>
-          </a>
-          <p class="recipe-author">بواسطة <%= recipe.authorize || "مستخدم مجهول" %></p>
-          <div class="recipe-details">
-            <div class="detail">
-                <img src="/logoAndIcon/persons_icon.svg" alt="أيقونة الأشخاص">
-                <span><%= recipe.minPeople %> - <%= recipe.maxPeople %> أشخاص</span>
+        <div class="recipe-card">
+        <a href="/dashboard/recipe/<%= recipe._id %>" style="text-decoration: none; color: #000;">
+            <img src="<%= recipe.image %>" alt="<%= recipe.name %>" class="recipe-image">
+            <div class="recipe-content position-relative">
+              <h3 class="recipe-title">
+                <%= recipe.name %>
+                </h3>
+              </a>
+              <p class="recipe-author">بواسطة <%= recipe.authorize || "مستخدم مجهول" %></p>
+              <div class="recipe-details">
+                <div class="detail">
+                  <img src="/logoAndIcon/persons_icon.svg" alt="أيقونة الأشخاص">
+                  <span><%= recipe.minPeople %> - <%= recipe.maxPeople %> أشخاص</span>
+                </div>
+                <div class="detail">
+                  <img src="/logoAndIcon/Time_icon.svg" alt="أيقونة الوقت">
+                  <span><%= recipe.time %> دقيقة</span>
+                </div>
+                <div class="detail">
+                  <img src="/logoAndIcon/Dish_icon.svg" alt="أيقونة الطبق">
+                  <span><%= recipe.type %></span>
+                </div>
+                <div class="detail">
+                  <img src="/logoAndIcon/Level_icon.svg" alt="أيقونة المستوى">
+                  <span><%= recipe.level %></span>
+                </div>
+              </div>
             </div>
-            <div class="detail">
-                <img src="/logoAndIcon/Time_icon.svg" alt="أيقونة الوقت">
-                <span><%= recipe.time %> دقيقة</span>
-            </div>
-            <div class="detail">
-                <img src="/logoAndIcon/Dish_icon.svg" alt="أيقونة الطبق">
-                <span><%= recipe.type %></span>
-            </div>
-            <div class="detail">
-                <img src="/logoAndIcon/Level_icon.svg" alt="أيقونة المستوى">
-                <span><%= recipe.level %></span>
-            </div>
-        </div>
-    </div>
+          </div>          
+    <% }) %>
 </div>
-<% }) %>
-
-</div>
-
 </div>
