@@ -19,6 +19,9 @@ body{
     overflow: hidden;
     text-align: right;
     flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -44,6 +47,102 @@ body{
     color: #333;
 }
 
+
+.recipe-author {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+.recipe-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.detail {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.detail img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+
+.logo{
+    max-width: 80px;
+    height: auto;
+    width: auto;
+    display: block;
+}
+  
+  footer{
+    width:100% ;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-top: 10%;
+   
+}
+footer p{
+    font-size: 1.25rem;
+    text-align: center;
+
+}
+footer .copyright{
+    font-size: 1rem;
+}
+
+
+
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 10px;
+
+}
+
+
+.btn-transparent:hover i {
+    color: gray; 
+}
+
+
+.btn-transparent i {
+    font-size: 1.5rem; 
+    color: #000; 
+}
+
+
+.add-recipe-button {
+    display: inline-block;
+    margin: 20px 20px ;
+    padding: 10px 20px;
+    background-color:#FFA500;
+    color: #000;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-recipe-button:active{
+    box-shadow: 0 0 10px #ffa500; 
+    transition: all 0.3s ease-in-out; 
+}
 
 .recipe-author {
     font-size: 14px;
